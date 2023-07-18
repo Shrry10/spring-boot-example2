@@ -27,8 +27,8 @@ public class StudentController {
     }
 
     @PostMapping
-    public void addStudents(@RequestBody Student studentdetails) {
-        studentService.addStudents(studentdetails);
+    public void addStudents(@RequestBody Student student) {
+        studentService.addStudents(student);
     }
 
     @DeleteMapping("{studentId}")

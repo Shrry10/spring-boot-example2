@@ -8,6 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Integer> {
-    @Query(value = "SELECT s FROM STUDENT s WHERE s.email = ?1", nativeQuery = true)
-    Optional<Student> findStudentByEmail(String email);
+//    @Query(value = "SELECT s FROM STUDENT s WHERE s.email = ?1", nativeQuery = true)
+//    Optional<Student> findStudentByEmail(String email);
 }

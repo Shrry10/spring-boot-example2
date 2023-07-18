@@ -24,15 +24,14 @@ public class StudentService {
             return studentRepository.findAll();
     }
 
-    public void addStudents(Student studentdetails) {
+    public void addStudents(Student student) {
 
-//        mentioned part checks for already existing email but doesn't work (error: The column name id was not found in this ResultSet)
-
-//        Optional<Student> studentOptional = studentRepository.findStudentByEmail(studentdetails.getEmail());
+//        Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
 //        if(studentOptional.isPresent()) {
 //            throw new IllegalStateException("email taken");
 //        }
-        studentRepository.save(studentdetails);
+
+        studentRepository.save(student);
     }
 
     public void deleteStudents(Integer id) {
@@ -56,8 +55,6 @@ public class StudentService {
                 updatestudent.email().length() > 0 &&
                 !Objects.equals(student.getEmail(), updatestudent.email())
         ) {
-
-//            mentioned part checks for already existing email but doesn't work (error: The column name id was not found in this ResultSet)
 
 //            Optional<Student> studentOptional = studentRepository.findStudentByEmail(updatestudent.email());
 //            if(studentOptional.isPresent()) {
